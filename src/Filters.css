@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.filters{
+    background-color: white;
+    box-shadow: 3px 3px 5px 6px rgb(224, 223, 223);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 15px;
+}
+
+.filters__head {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.filters__global {
+    margin-bottom: 25px;
+}
+
+.filters__text {
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.filters__launchyear--rule {
+    width: 70%;
+    background-color: black;
+    margin: auto;
+    height: .25px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 500px) {
+
+}
