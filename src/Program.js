@@ -1,28 +1,35 @@
 import React from 'react';
 import "./Program.css";
 
-function Program() {
+function Program(prop) {
+
+    var mission_id = prop.data.mission_id;
+    console.log(mission_id)
 
     return (
         <div className="program">
             <div className="program__imgcontainer">
-                <img src="https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png" alt="program" className="program__image"/>    
+                <img src={prop.data.links.mission_patch} alt="program" className="program__image"/>    
             </div> 
             <div className="program__details">
-                <h3>FalconSat #1</h3>
+                <h3>{prop.data.mission_name} #{prop.data.flight_number}</h3>
 
                 <table>
                     <tr>
                         <td>Mission IDs: </td>
-                        <td>list Mission IDs</td>
+                        <td>
+                            {mission_id.length ? mission_id.map(mission => (
+                                <li>{mission ? mission : "Not Available" }</li>
+                            )) : "unknown"}
+                        </td>
                     </tr>
                     <tr>
                         <td>Launch Year: </td>
-                        <td>2006</td>
+                        <td>{prop.data.launch_year}</td>
                     </tr>
                     <tr>
                         <td>Successful Launch: </td>
-                        <td>false</td>
+                        <td>{prop.data.launch_success ? "Successful" : "Unsuccessful"}</td>
                     </tr>
                     <tr>
                         <td>Successful Landing: </td>

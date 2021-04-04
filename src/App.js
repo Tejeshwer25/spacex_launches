@@ -13,6 +13,7 @@ function App() {
     .then((response) => response.json())
     .then((data) => {
       setData(data)
+      setIsLoaded(true)
     }, 
     (error)=> {
       setIsLoaded(true);
@@ -27,7 +28,8 @@ function App() {
   } 
   else if (!isLoaded) {
     return <div>Loading...</div>;
-  } else {
+  } 
+  else {
     return (
       <div className="app">
       <div className="app__header">
@@ -41,7 +43,7 @@ function App() {
 
         <div className="app__programs">
           {data.map(item => (
-            <Program />
+            <Program data={item}/>
           ))}
         </div>
       </div>
