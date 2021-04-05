@@ -50,6 +50,10 @@ tr:nth-child(2n) {
     background: #ccc;
 }
 
+.no__program {
+    display: none;
+}
+
 @media only screen and (min-width: 700px) {
     .program {
         width: 35%;

@@ -3,10 +3,10 @@ import "./Program.css";
 
 function Program(prop) {
 
-    var mission_id = prop.data.mission_id;
-    console.log(mission_id)
+    var mission_id = prop.data.mission_id;     
 
     return (
+        
         <div className="program">
             <div className="program__imgcontainer">
                 <img src={prop.data.links.mission_patch} alt="program" className="program__image"/>    
@@ -30,10 +30,6 @@ function Program(prop) {
                     <tr>
                         <td>Successful Launch: </td>
                         <td>{prop.data.launch_success ? "Successful" : "Unsuccessful"}</td>
-                    </tr>
-                    <tr>
-                        <td>Successful Landing: </td>
-                        <td>launch_landing</td>
                     </tr>
                 </table>
             </div>

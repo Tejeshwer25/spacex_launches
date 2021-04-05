@@ -11,6 +11,12 @@
     border: none;
     background-color: rgb(192, 250, 106);
     margin: 10px 3px;
+    cursor: pointer;
+}
+
+.true {
+    background: green;
+    color: white;
 }
 
 @media only screen and (min-width: 700px) {
